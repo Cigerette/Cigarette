@@ -1,150 +1,204 @@
-<!DOCTYPE html>
-
-<html>
-
-<head>
-
-  <title>Cigarette</title>
-
+<!doctype html>
+<html lang="en"> 
+ <head> 
+  <meta charset="UTF-8"> 
+  <title>Cigarette</title> 
   <style>
+    /* Theme Colors */
+    :root {
+      --violet: #7f5af0;
+      --blue: #00aaff;
+      --orange: #ff6a00;
+      --black: #1b1b2f;
+      --white: #fefefe;
+      --gray: #dcdcdc;
+    }
+
+    /* Reset and Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
     body {
-
-      background-color: #f1f1f1;
-
-      font-family: "Times New Roman", serif;
-
-      color: #191970;
-
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #1b1b2f, #2e2a47);
+      color: var(--white);
+      line-height: 1.6;
+      position: relative;
+      min-height: 100vh;
+      overflow-x: hidden;
+      animation: fadeIn 1.2s ease;
     }
 
-    h1 {
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
 
-      color: #ff6000;
-
-      text-align: center;
-
-      margin-top: 30px;
-
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
-    h2 {
+    /* Background Decor */
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-image:
+        radial-gradient(circle, rgba(255, 255, 255, 0.05) 2px, transparent 2px),
+        radial-gradient(circle, rgba(255, 255, 255, 0.05) 1.5px, transparent 1.5px);
+      background-size: 50px 50px, 100px 100px;
+      z-index: 0;
+    }
 
-      color: #8470FF;
+    .swirl {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle at center, rgba(127, 90, 240, 0.2), transparent);
+      border-radius: 50%;
+      filter: blur(100px);
+      z-index: 0;
+    }
 
+    .swirl.blue {
+      top: 10%;
+      left: -10%;
+      background: radial-gradient(circle at center, rgba(0, 170, 255, 0.2), transparent);
+    }
+
+    .swirl.purple {
+      bottom: 5%;
+      right: -10%;
     }
 
     .container {
+      position: relative;
+      z-index: 2;
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+      backdrop-filter: blur(10px);
+      transition: transform 0.3s;
+    }
 
-      max-width: 800px;
+    .container:hover {
+      transform: scale(1.01);
+    }
 
-      margin: 0 auto;
-
-      padding: 30px;
-
+    h1 {
+      color: var(--orange);
+      font-size: 2.5em;
+      margin-bottom: 10px;
       text-align: center;
+    }
 
+    h2 {
+      color: var(--violet);
+      margin-top: 30px;
+      font-size: 1.5em;
+    }
+
+    p {
+      margin: 15px 0;
+      font-size: 1.05em;
+      text-align: center;
+    }
+
+    em {
+      color: var(--blue);
+      font-style: normal;
+      font-weight: 600;
     }
 
     ul {
-
-      list-style-type: none;
-
-      padding: 0;
-
-      margin: 0;
-
       text-align: left;
-
+      margin: 20px 0 30px 0;
+      padding-left: 20px;
     }
 
     li {
-
-      margin-bottom: 10px;
-
+      margin-bottom: 8px;
     }
 
     img {
-
+      display: block;
       max-width: 100%;
+      margin: 25px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    }
 
-      height: auto;
+    hr {
+      margin: 30px 0;
+      border: none;
+      height: 1px;
+      background: var(--gray);
+      opacity: 0.2;
+    }
 
-      margin-top: 20px;
+    a {
+      color: var(--blue);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
 
+    a:hover {
+      color: var(--orange);
     }
 
     .footer {
-
-      margin-top: 50px;
-
       text-align: center;
-
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #aaa;
+      z-index: 2;
+      position: relative;
     }
-
-    .footer a {
-
-      color: #00BFFF;
-
-      text-decoration: none;
-
-    }
-
-  </style>
-
-</head>
-
-<body>
-
-  <div class="container">
-
-    <h1>Welcome To <em>Cigarette</em> :)</h1>
-
-    <p>This is The Official Website of Whatsapp Group <em>Cigarette</em></p>
-
-    <p>It is a Group made for Exclusive Entertainment and Timepass Purposes.</p>
-
-    <p>Remember To Not take this Group as a Joke, For it is a premium service.</p>
-
-    <p>To Avail this Group You must ensure to give a <em>premium test</em>,<br>which is to have an Excellent sense of Humour And an astounding premium of $0.00.</p>
-
-    <p><b>Thus, We Allow <em>No Limits To our Jokes</em> :)</b></p>
-
-    <h2>Members:</h2>
-
-    <ul>
-
-      <li>Mr. Ayan Arshad (Dilkash)</li>
-
-      <li>Mr. Faizan Wasim (Ayan)</li>
-
-      <li>Mr. Shihab Sarwar</li>
-
-      <li>Mr. Abdul Kadir</li>
-
-      <li>Ms. Sumera Sarwar</li>
-
-    </ul>
-
-    <img src="Screenshot_20230107-120844_WhatsApp.jpg" alt="Alt Text">
-
-    <p><b>Thank You For Visitin'</b></p>
-
-    <hr>
-
-    <p><b>Website Created By: <a href="https://cigerette.github.io/Montage-AboutMe/">Mr. MD. Shihab Sarwar</a></b></p>
-
-    <p>Click on <a href="https://cigerette.github.io/Montage-AboutMe/">MD.SHIHAB SARWAR</a> to know more about him.</p>
-
-  </div>
-
-  <div class="footer">
-
-    <p>&copy; 2023 Cigarette. All rights reserved.</p>
-
-  </div>
-
-</body>
-
+  </style> 
+ </head> 
+ <body> <!-- Background swirls --> 
+  <div class="swirl blue"></div> 
+  <div class="swirl purple"></div> 
+  <div class="container"> 
+   <h1>Welcome To <em>Cigarette</em> 🙂</h1> 
+   <p>This is the official website of the WhatsApp group <em>Cigarette</em>.</p> 
+   <p>Formed for exclusive entertainment and premium timepass.</p> 
+   <p>Not just a joke — this group is <em>premium</em>.</p> 
+   <p>To join, pass our <em>premium test</em> with:</p> 
+   <ul> 
+    <li>An excellent sense of humor</li> 
+    <li>An astounding premium of $0.00</li> 
+   </ul> 
+   <p><strong>We allow <em>No Limits</em> to our jokes! 😄</strong></p> 
+   <h2>Members:</h2> 
+   <ul> 
+    <li>Mr. Ayan Arshad (Dilkash)</li> 
+    <li>Mr. Faizan Wasim (Ayan)</li> 
+    <li>Mr. Shihab Sarwar</li> 
+    <li>Mr. Abdul Kadir</li> 
+    <li>Ms. Sumera Sarwar</li> 
+   </ul> 
+   <img src="Screenshot_20230107-120844_WhatsApp.jpg" alt="Group Photo"> 
+   <p><strong>Thanks for visiting!</strong></p> 
+   <hr> 
+   <p><strong>Website created by: <a href="https://cigerette.github.io/Montage-AboutMe/">Mr. MD. Shihab Sarwar</a></strong></p> 
+   <p>Click the name above to know more.</p> 
+  </div> 
+  <div class="footer"> 
+   <p>© 2023 Cigarette. All rights reserved.</p> 
+  </div> 
+ </body>
 </html>
-
